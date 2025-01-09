@@ -11,11 +11,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        mysql-version: [5.7]
+        mariadb_version: [5.7, 10.2, 10.3]
 
     services:
       mysql:
-        image: mysql:${{ mysql-version }}
+        image: mysql:${{ mariadb_version }}
         env:
           MYSQL_ROOT_PASSWORD: uvlhub_root_password
           MYSQL_DATABASE: uvlhubdb_test
