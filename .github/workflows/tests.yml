@@ -15,7 +15,7 @@ jobs:
 
     services:
       mysql:
-        image: mysql:${{ mariadb_version }}
+        image: mysql:5.7
         env:
           MYSQL_ROOT_PASSWORD: uvlhub_root_password
           MYSQL_DATABASE: uvlhubdb_test
