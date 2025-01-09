@@ -14,8 +14,8 @@ jobs:
         mariadb_version: [5.7, 10.2, 10.3]
 
     services:
-      mariadb:
-        image: mariadb:${{ matrix.mariadb_version }}
+      mysql:
+        image: mysql:${{ matrix.mariadb_version }}
         env:
           MYSQL_ROOT_PASSWORD: uvlhub_root_password
           MYSQL_DATABASE: uvlhubdb_test
