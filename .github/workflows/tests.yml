@@ -8,14 +8,9 @@ jobs:
   pytest:
     runs-on: ubuntu-latest
 
-    strategy:
-      fail-fast: false
-      matrix:
-        mysql-version: [mysql:5.7]
-
     services:
       mysql:
-        image: ${{ matrix.mysql-version }}
+        image: mysql:5.7
         env:
           MYSQL_ROOT_PASSWORD: uvlhub_root_password
           MYSQL_DATABASE: uvlhubdb_test
